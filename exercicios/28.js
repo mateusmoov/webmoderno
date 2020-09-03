@@ -18,7 +18,7 @@ function crianca(altura1, altura2, taxa1, taxa2) {
     altCriancaMenor = altura1;
     txCriancaMenor = taxa1;
   }
-  
+
   console.log(`Qual o menor criança ${altCriancaMenor}\n`);
 
   if (txCriancaMenor <= txCriancaMaior) {
@@ -28,13 +28,17 @@ function crianca(altura1, altura2, taxa1, taxa2) {
 
     console.log(`A partir daqui mostra o crescimento: \n`);
     while (altCriancaMenor < altCriancaMaior) {
-      console.log(`ano: ${anos} criança menor: ${altCriancaMenor} maior: ${altCriancaMaior}\n`);
-      altCriancaMenor = altCriancaMenor + (altCriancaMenor * txCriancaMenor);
-      altCriancaMaior = altCriancaMaior + (altCriancaMaior * txCriancaMaior);
+      console.log(
+        `ano: ${anos} criança menor: ${altCriancaMenor} maior: ${altCriancaMaior}\n`
+      );
+      altCriancaMenor = altCriancaMenor + altCriancaMenor * txCriancaMenor;
+      altCriancaMaior = altCriancaMaior + altCriancaMaior * txCriancaMaior;
       anos++;
     }
-    
-    console.log(`ano: ${anos} criança menor: ${altCriancaMenor} maior: ${altCriancaMaior}\n`);
+
+    console.log(
+      `ano: ${anos} criança menor: ${altCriancaMenor} maior: ${altCriancaMaior}\n`
+    );
     console.log(`Vão demorar ${anos} anos para ultrapassar\n`); // \n pula a linha
     return anos; //o retorno tem que permancer
   }
