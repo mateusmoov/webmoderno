@@ -9,5 +9,7 @@ const eCaro = p => p.preco > 2400
 const eFragil = p => p.fragil
 
 const resultado = produtos.filter(eCaro).filter(eFragil)
+// Filter = filtrar uma informação de uma array.
+// Parece muito como extrair informações de um banco de dados.
 
 console.log(resultado)
